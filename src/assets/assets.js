@@ -11,6 +11,9 @@ import main_app_1 from "./main-app-1.png";
 import main_app_2 from "./main-app-2.png";
 import moc_up from "./Moc-Up.jpg";
 import features_img from "./feature-img.jpg";
+import testimonial_1 from "./testimonial_1.png"
+import testimonial_2 from "./testimonial_2.png"
+import testimonial_3 from "./testimonial_3.png"
 
 export const assets = {
   logo,
@@ -25,7 +28,10 @@ export const assets = {
   main_app_1,
   main_app_2,
   moc_up,
-  features_img
+  features_img,
+  testimonial_1,
+  testimonial_2,
+  testimonial_3
 }
 
 export const navLinksData = [

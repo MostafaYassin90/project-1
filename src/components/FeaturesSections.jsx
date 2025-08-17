@@ -54,7 +54,7 @@ const FeaturesSection = () => {
               key={index}
               className="bg-white p-5 rounded-2xl shadow-md hover:shadow-lg transition"
             >
-              <h3 className="font-semibold text-lg text-blue-600">
+              <h3 className="font-semibold text-lg text-gray-700">
                 {feature.title}
               </h3>
               <p className="text-gray-600">{feature.desc}</p>
