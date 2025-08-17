@@ -53,8 +53,7 @@ function Hero() {
       </header>
 
       {/* قسم البطل */}
-      <section className="hero relative pb-[40px] overflow-hidden h-screen flex items-center justify-between px-10 pt-28 bg-cover bg-center"
-        style={{ backgroundImage: "url('../assets/main-app-2.png')" }} >
+      <section className="hero relative pb-[40px] overflow-hidden h-screen flex items-center justify-between px-10 pt-28" >
 
         {/* طبقة شفافة */}
         <div className="absolute inset-0 bg-black/50"></div>
