@@ -6,16 +6,12 @@ import main_img from "./main.png";
 import desert_img from "./desert.png";
 import bakery_img from "./bakery.png";
 import random_img from "./random.png";
-import sara_ch from "./sara-ch.jpg";
-import creativity_ch from "./creativity-ch.jpg";
-import da2_ch from "./da2-ch.jpg";
-import home_ch from "./home-ch.jpg";
-import mo_ch from "./mo-ch.jpg";
-import manal_ch from "./manal-ch.jpg";
 import about_img from "./about.png";
-import main_app_1 from "./main-app-1.png"
-import main_app_2 from "./main-app-2.png"
-import test from "./main-app-2.png"
+import main_app_1 from "./main-app-1.png";
+import main_app_2 from "./main-app-2.png";
+import moc_up from "./Moc-Up.jpg";
+import features_img from "./feature-img.jpg";
+
 export const assets = {
   logo,
   slide_1,
@@ -27,7 +23,9 @@ export const assets = {
   random_img,
   about_img,
   main_app_1,
-  main_app_2
+  main_app_2,
+  moc_up,
+  features_img
 }
 
 export const navLinksData = [
@@ -99,29 +97,3 @@ export const servicesData = [
   },
 ]
 
-export const servicesTwoData = [
-  {
-    title:"مطبخ سارة",
-    image: sara_ch,
-  },
-  {
-    title:"مطبخ الابداع",
-    image: creativity_ch,
-  },
-  {
-    title:"مطبخ ودق",
-    image: da2_ch,
-  },
-  {
-    title:"ماكولات بيتي",
-    image: home_ch,
-  },
-  {
-    title:"أم محمد",
-    image: mo_ch,
-  },
-  {
-    title:"منال العالم",
-    image: manal_ch,
-  },
-]

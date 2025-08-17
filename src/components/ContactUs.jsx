@@ -2,7 +2,7 @@ import { FaWhatsapp, FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa"
 
 function ContactUs() {
   return (
-    <div id="contact" className="py-16 px-[3vw] sm:px-[4vw] md:px-[5vw] lg:px-[7vw]">
+    <div id="contact" className="py-16 px-6 max-w-6xl mx-auto">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-1 gap-12 items-center">
 
         {/* form */}

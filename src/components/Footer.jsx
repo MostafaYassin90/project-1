@@ -6,7 +6,8 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-900 text-gray-300 pt-10">
-      <div className="container mx-auto px-6 grid md:grid-cols-3 gap-8">
+      <div className="px-6 max-w-6xl mx-auto">
+      <div className="container mx-auto px-6 grid md:grid-cols-3 gap-10">
 
         {/* Logo + About */}
         <div>
@@ -52,6 +53,7 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="border-t border-gray-700 mt-8 py-4 text-center text-sm text-gray-500">
         © {new Date().getFullYear()} مطبخ بيتك. جميع الحقوق محفوظة.
+      </div>
       </div>
     </footer>
   );

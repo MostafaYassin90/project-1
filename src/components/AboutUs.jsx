@@ -2,7 +2,7 @@ import { assets } from "../assets/assets";
 
 const About = () => {
   return (
-    <div id="about" className="py-16 px-[3vw] sm:px-[4vw] md:px-[5vw] lg:px-[7vw]">
+    <div id="about" className="py-16 px-6 max-w-6xl mx-auto">
       <div className="container mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16">
         
         {/* image */}

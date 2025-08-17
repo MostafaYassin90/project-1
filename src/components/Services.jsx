@@ -1,10 +1,8 @@
-import { servicesData, servicesTwoData } from '../assets/assets';
-import { FaRegHeart } from "react-icons/fa";
-import { FaStar } from "react-icons/fa6";
+import { servicesData } from '../assets/assets';
 
 const Services = () => {
   return (
-    <div id='services' className='py-20 px-[3vw] sm:px-[4vw] md:px-[5vw] lg:px-[7vw]'>
+    <div id='services' className='py-20 px-6 max-w-6xl mx-auto'>
 
       {/* Sections */}
       <div className='sections'>
@@ -27,7 +25,7 @@ const Services = () => {
 
 
       {/* Services */}
-      <div className='mt-20'>
+      {/* <div className='mt-20'>
 
         <div className='text-right text-3xl font-semibold text-gray-800 mb-8'>
           <h2>مزود الخدمة</h2>
@@ -55,7 +53,7 @@ const Services = () => {
             ))
           }
         </div>
-      </div>
+      </div> */}
 
 
     </div>
