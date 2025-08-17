@@ -1,78 +1,61 @@
-import { useEffect, useRef, useState } from "react";
-import { bulletsOfSlide, sliderData } from "../assets/assets"
+import { FaApple, FaGooglePlay } from "react-icons/fa";
+import { assets } from "../assets/assets";
 
-export const Hero = () => {
-  let [currentSlide, setCurrentSlide] = useState(0);
-  const sliderRef = useRef(null)
-
-  // Apply Slider
-  const applySlider = () => {
-    if (sliderRef.current) {
-      sliderRef.current.style.transform = `translateX(${currentSlide * 100}%)`;
-      sliderRef.current.style.transition = "transform 0.7s ease-in-out";
-    }
-  }
-
-  useEffect(() => {
-    applySlider()
-  }, [currentSlide])
-
+export default function Hero() {
   return (
-    <div className="h-[calc(100vh-120px)]  py-3 sm:px-4 md:px-5 lg:px-[7vw]">
+    <div>
+      <header className="fixed top-0 w-full bg-white shadow-md z-50">
+        <div className="container mx-auto flex items-center justify-between p-4">
+          <div className="text-xl font-bold text-orange-600">
+            <a href="/">
+              <img src={assets.logo} className="w-[100px]" />
+            </a>
+          </div>
+          <nav>
+            <ul className="flex gap-6 text-gray-700">
+              <li><a href="/" className="hover:text-orange-600">الرئيسية</a></li>
+              <li><a href="#about" className="hover:text-orange-600">من نحن</a></li>
+              <li><a href="#services" className="hover:text-orange-600">خدماتنا</a></li>
+              <li><a href="#" className="hover:text-orange-600">آراء العملاء</a></li>
+              <li><a href="#contact" className="hover:text-orange-600">اتصل بنا</a></li>
+            </ul>
+          </nav>
+          <a href="#" className="bg-orange-600 text-white px-4 py-2 rounded-full hover:bg-orange-500 transition">
+            حمّل التطبيق الآن
+          </a>
+        </div>
+      </header>
 
-      {/* Slider Wrapper */}
-      <div className="relative w-full h-[calc(100vh-120px)]  overflow-hidden rounded-xl shadow-lg">
+      {/* قسم البطل */}
+      <section className="hero relative pb-[40px] overflow-hidden h-screen flex items-center justify-between px-10 pt-28 bg-cover bg-center"
+        style={{ backgroundImage: "url('../assets/main-app-2.png')" }} >
 
-        {/* Slides Container */}
-        <div
-          ref={sliderRef}
-          className="flex w-full h-full"
-        >
-          {sliderData.map((slide, index) => (
-            <div
-              key={index}
-              className="bg-[#f1f1f1] max-md:p-12 p-5 rounded-xl min-w-full flex flex-col md:flex-row gap-10 items-center"
-            >
-              {/* الصورة */}
-              <div className="flex-1 p-1 bg-white max-md:h-[70%] xl:h-[90%] border-2 border-gray-400 rounded-md">
-                <img
-                  src={slide.image}
-                  alt="slide image"
-                  className="block rounded-md w-full h-full xl:h-full object-cover"
-                />
-              </div>
+        {/* طبقة شفافة */}
+        <div className="absolute inset-0 bg-black/50"></div>
 
-              {/* النص */}
-              <div className="flex-1 text-center">
-                <h2 className="text-3xl md:text-5xl text-gray-600 font-bold">
-                  {slide.title}
-                </h2>
-                <p className="text-base md:text-lg mt-5 text-gray-600 font-medium">
-                  {slide.text}
-                </p>
-              </div>
-            </div>
-          ))}
+        {/* النصوص */}
+        <div className="relative z-10 text-white max-w-xl">
+          <h1 className="text-4xl font-bold leading-relaxed mb-4">
+            اكتشف نكهات بيتية أصيلة بالقرب منك 🍲
+          </h1>
+          <p className="mb-6 text-lg">
+            حمّل تطبيق نكهة بيتنا وابدأ بتجربة مأكولات منزلية مميزة من أيدي أمهر الطهاة المحليين.
+          </p>
+          <div className="flex gap-4">
+            <a href="#" className="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-lg hover:bg-gray-200 transition">
+              <FaApple className="text-2xl" /> App Store
+            </a>
+            <a href="#" className="flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-500 transition">
+              <FaGooglePlay className="text-2xl" /> Google Play
+            </a>
+          </div>
         </div>
 
-        {/* Bullets */}
-        <div className="absolute w-full bottom-5 left-0 flex justify-center">
-          <ul className="flex items-center gap-3">
-            {bulletsOfSlide.map((item, index) => (
-              <li
-                onClick={() => {
-                  setCurrentSlide(index);
-                  applySlider();
-                }}
-                key={index}
-                className={`block w-[80px] h-[12px] rounded-full cursor-pointer transition-all duration-300
-                  ${currentSlide === index ? "bg-[#E7B40B]" : "bg-gray-300"}`}
-              ></li>
-            ))}
-          </ul>
+        {/* صورة الموك اب */}
+        <div className="relative z-10 hidden md:block overflow-y-auto max-h-[100%] no-scrollbar rounded-xl">
+          <img src={assets.main_app_1} alt="واجهة التطبيق" className="w-[300px] rounded-xl shadow-2xl max-h-[100%] no-scrollbar" />
         </div>
-
-      </div>
+      </section>
     </div>
-  )
+  );
 }

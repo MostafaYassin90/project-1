@@ -13,7 +13,9 @@ import home_ch from "./home-ch.jpg";
 import mo_ch from "./mo-ch.jpg";
 import manal_ch from "./manal-ch.jpg";
 import about_img from "./about.png";
-
+import main_app_1 from "./main-app-1.png"
+import main_app_2 from "./main-app-2.png"
+import test from "./main-app-2.png"
 export const assets = {
   logo,
   slide_1,
@@ -23,7 +25,9 @@ export const assets = {
   desert_img,
   bakery_img,
   random_img,
-  about_img
+  about_img,
+  main_app_1,
+  main_app_2
 }
 
 export const navLinksData = [
